@@ -1,0 +1,71 @@
+@use "variables";
+
+.side-container {
+  margin-top: 5rem;
+  background: #ffffff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  //   height: 100vh;
+  position: absolute;
+  left: 0;
+  width: 15rem;
+  padding-top: 2rem;
+  .title-container {
+    padding-bottom: 1.5rem;
+
+    .title {
+      display: flex;
+      gap: 1rem;
+      padding: 0.5rem 2rem;
+      align-items: center;
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+        color: variables.$primary-color;
+      }
+    }
+    .title:hover {
+      background-color: variables.$button-color;
+      color: variables.$secondary-color;
+    }
+  }
+  .sideBar {
+    padding-bottom: 1rem;
+    .heading {
+      padding: 0 2rem 1rem 2rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    .customer {
+      padding-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 2rem;
+      p {
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        color: variables.$primary-color;
+      }
+    }
+    .customer:hover {
+      background-color: variables.$button-color;
+      color: variables.$secondary-color;
+    }
+  }
+}
+@media screen and (max-width: 778px) {
+  .side-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15rem;
+    // height: 100%;
+    margin-top: 4rem;
+    transform: translateX(-100%);
+    transition: all 2s ease-in-out;
+  }
+  .active {
+    transform: none;
+  }
+}

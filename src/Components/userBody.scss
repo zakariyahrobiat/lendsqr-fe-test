@@ -1,0 +1,215 @@
+@use "variables";
+
+// }
+
+.body-container {
+  // margin-top: 4rem;
+  //   margin-left: 15rem;
+  // padding: 2rem 0;
+  width: 100vw;
+
+  .data-container {
+    // margin-top: 2rem;
+    background: #ffffff;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 1rem;
+    width: 100%;
+    .title {
+      display: grid;
+      align-items: center;
+      justify-content: flex-start;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      padding-bottom: 1rem;
+      gap: 1rem;
+
+      .organisation {
+        //   width: 15%;
+        display: flex;
+        align-items: center;
+        img {
+          width: 5px;
+        }
+      }
+      .username {
+        //   width: 15%;
+        display: flex;
+        align-items: center;
+        img {
+          width: 5px;
+        }
+      }
+      .phonenumber {
+        //   width: 15%;
+        display: flex;
+        align-items: center;
+        img {
+          width: 5px;
+        }
+      }
+      .status {
+        //   width: 5%;
+        display: flex;
+        align-items: center;
+        img {
+          width: 5px;
+        }
+      }
+      .email {
+        //   width: 20%;
+        display: flex;
+        align-items: center;
+        img {
+          width: 5px;
+        }
+      }
+      .joined {
+        //   width: 15%;
+        display: flex;
+        align-items: center;
+        img {
+          width: 5px;
+        }
+      }
+      p {
+        font-size: 0.5rem;
+        font-weight: 600;
+        color: variables.$secondary-color;
+      }
+    }
+    .form-wrapper {
+      display: flex;
+      .form-container {
+        width: 30%;
+        padding: 0.5rem;
+        background: #ffffff;
+        border: 1px solid rgba(84, 95, 125, 0.14);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        .form-control {
+          width: 100%;
+          select {
+            width: 100%;
+          }
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .data {
+      display: grid;
+      gap: 0.5rem;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      word-wrap: break-word;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+
+      p {
+        font-size: 0.6rem;
+        font-weight: 400;
+        color: variables.$secondary-color;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: variables.$desktop) {
+  .body-container {
+    // margin-top: 2rem;
+    margin-left: 15rem;
+    // padding: 2rem 0;
+    width: 70vw;
+
+    .data-container {
+      // margin-top: 2rem;
+      background: #ffffff;
+      border: 1px solid rgba(33, 63, 125, 0.06);
+      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+      border-radius: 4px;
+      padding: 1rem;
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-bottom: 1rem;
+        gap: 1rem;
+        .organisation {
+          width: 15%;
+          display: flex;
+          align-items: center;
+        }
+        .username {
+          width: 15%;
+          display: flex;
+          align-items: center;
+        }
+        .phonenumber {
+          width: 15%;
+          display: flex;
+          align-items: center;
+        }
+        .status {
+          width: 5%;
+          display: flex;
+          align-items: center;
+        }
+        .email {
+          width: 20%;
+          display: flex;
+          align-items: center;
+        }
+        .joined {
+          width: 15%;
+          display: flex;
+          align-items: center;
+        }
+        p {
+          font-size: 0.75rem;
+          font-weight: 600;
+          color: variables.$secondary-color;
+        }
+      }
+      .data {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        word-wrap: break-word;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+        .organisation {
+          width: 15%;
+        }
+        .username {
+          width: 15%;
+        }
+        .phonenumber {
+          width: 15%;
+        }
+        .status {
+          width: 5%;
+        }
+        .email {
+          width: 20%;
+        }
+        .img {
+          width: 3%;
+        }
+        .joined {
+          width: 15%;
+        }
+        p {
+          font-size: 0.875rem;
+          font-weight: 400;
+          color: variables.$secondary-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@use "variables";
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  .footer-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    p {
+      font-weight: 400;
+      font-size: 0.875rem;
+      color: variables.$secondary-color;
+    }
+    .page {
+      background-color: rgba(33, 63, 125, 0.1);
+      border-radius: 4px;
+      padding: 0.2rem 0.7rem;
+    }
+  }
+
+  .footer-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    p {
+      font-size: 1rem;
+      color: variables.$secondary-color;
+      font-weight: 400;
+    }
+  }
+}
+@media screen and (min-width: variables.$desktop) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    margin-left: 15rem;
+
+    .footer-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      p {
+        font-weight: 400;
+        font-size: 0.875rem;
+        color: variables.$secondary-color;
+      }
+      .page {
+        background-color: rgba(33, 63, 125, 0.1);
+        border-radius: 4px;
+        padding: 0.2rem 0.7rem;
+      }
+    }
+
+    .footer-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      p {
+        font-size: 1rem;
+        color: variables.$secondary-color;
+        font-weight: 400;
+      }
+    }
+  }
+}
