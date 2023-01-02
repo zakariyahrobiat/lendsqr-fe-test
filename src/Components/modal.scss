@@ -9,8 +9,8 @@
     border: 1px solid rgba(84, 95, 125, 0.04);
     box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
     border-radius: 4px;
-    width: 180px;
-    height: 130px;
+    width: 100px;
+    height: 70px;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -21,6 +21,14 @@
       font-weight: 500;
       color: variables.$secondary-color;
       line-height: 2.5;
+    }
+  }
+}
+@media screen and (min-width: variables.$desktop) {
+  .modal-container {
+    .modal {
+      width: 180px;
+      height: 130px;
     }
   }
 }
