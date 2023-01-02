@@ -7,19 +7,29 @@ type BoxProps = {
 const AppContext = React.createContext<any>(null);
 const Context = (props: BoxProps) => {
   const refContainer = useRef<any>(null);
+
   const [data, setData] = useState<any>([]);
   const [start, setstart] = useState<number>(0);
   const [end, setEnd] = useState<number>(9);
   const [count, setCount] = useState<number>(1);
+  const [detail, setDetail] = useState<any>(data[1]);
+
   function showNav() {
     refContainer.current.classList.toggle("active");
   }
+
   useEffect(() => {
-    fetch("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users")
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-      });
+    const fetchData = async () => {
+      const Data = await fetch(
+        "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users"
+      );
+      const json = await Data.json();
+      console.log(json[1]);
+
+      setData(json);
+    };
+
+    fetchData();
   }, [data]);
   if (data.length === 0) {
     return null;
@@ -43,7 +53,17 @@ const Context = (props: BoxProps) => {
       setstart(start);
     }
   };
+  const getPerson = (id: any) => {
+    const user = data.find((item: any) => item.id === id);
 
+    return user;
+  };
+  const handleDetail = (id: any) => {
+    const user = getPerson(id);
+    console.log(user);
+
+    setDetail({ detail: user });
+  };
   return (
     <AppContext.Provider
       value={{
@@ -56,6 +76,8 @@ const Context = (props: BoxProps) => {
         count,
         increase,
         decrease,
+        handleDetail,
+        detail,
       }}
     >
       {/* <App /> */}

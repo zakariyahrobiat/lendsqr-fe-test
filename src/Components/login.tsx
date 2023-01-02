@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/images/logo.svg";
 import hero from "../assets/images/hero.svg";
+import { Link } from "react-router-dom";
 import "./login.scss";
 const Login: React.FC = () => {
   const [data, setData] = useState<{ email: string; password: string }>({
@@ -50,9 +51,9 @@ const Login: React.FC = () => {
               <p className="show-password">SHOW</p>
             </div>
             <p>Forgot PASSWORD?</p>
-            <button type="submit" onClick={Login}>
-              LOG IN
-            </button>
+            <Link to="/dashboard">
+              <button>LOG IN</button>
+            </Link>
           </form>
         </div>
       </div>

@@ -1,0 +1,12 @@
+@use "variables";
+.detail-container {
+  margin-top: 4rem;
+}
+@media screen and (min-width: variables.$desktop) {
+  .detail-container {
+    margin-top: 5rem;
+    width: 70vw;
+    margin-left: 15rem;
+    padding: 2rem 0;
+  }
+}

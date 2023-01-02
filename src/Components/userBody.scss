@@ -89,12 +89,40 @@
         border-radius: 4px;
         .form-control {
           width: 100%;
-          select {
-            width: 100%;
+          label {
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: variables.$secondary-color;
           }
           input {
             width: 100%;
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: variables.$secondary-color;
+            border: 1px solid variables.$primary-color;
+            padding: 0.3rem 0.1rem;
+            margin: 0.5rem 0;
           }
+          select {
+            width: 100%;
+            padding: 0.3rem 0.1rem;
+            margin: 0.5rem 0;
+            border: 1px solid variables.$primary-color;
+            font-weight: 400;
+            font-size: 0.875rem;
+            color: variables.$secondary-color;
+          }
+        }
+        button {
+          padding: 0.5rem 1.5rem;
+          border-radius: 0.5rem;
+          border: 1px solid variables.$secondary-color;
+          background-color: transparent;
+          margin-top: 1rem;
+        }
+        .color {
+          background-color: variables.$button-color;
+          //   margin-left: 1rem;
         }
       }
     }
@@ -108,6 +136,7 @@
       word-wrap: break-word;
       padding: 0.5rem 0;
       border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+      margin-left: 0.5rem;
 
       p {
         font-size: 0.6rem;
@@ -174,35 +203,75 @@
           color: variables.$secondary-color;
         }
       }
+      .form-wrapper {
+        .form-container {
+          .form-control {
+            label {
+              font-weight: 500;
+              font-size: 0.875rem;
+              color: variables.$secondary-color;
+            }
+            input {
+              padding: 0.3rem 1rem;
+              margin: 0.3rem 0;
+            }
+            input::placeholder {
+              font-weight: 400;
+              font-size: 0.875rem;
+              color: variables.$secondary-color;
+            }
+            select {
+              padding: 0.3rem 1rem;
+              margin: 0.3rem 0;
+              border: 1px solid variables.$secondary-color;
+              font-weight: 400;
+              font-size: 0.875rem;
+              color: variables.$secondary-color;
+            }
+          }
+          button {
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid variables.$secondary-color;
+            background-color: transparent;
+            margin-top: 1rem;
+          }
+          .color {
+            background-color: variables.$button-color;
+            margin-left: 1rem;
+          }
+        }
+      }
       .data {
         display: flex;
         gap: 1rem;
         align-items: center;
-        justify-content: space-between;
-        grid-template-columns: repeat(7, minmax(0, 1fr));
+        justify-content: space-betwee;
+
         word-wrap: break-word;
         padding: 0.5rem 0;
         border-bottom: 1px solid rgba(33, 63, 125, 0.1);
-        .organisation {
-          width: 15%;
-        }
-        .username {
-          width: 15%;
-        }
+        margin-left: 1rem;
+        // .organisation {
+        //   width: %;
+        // }
+        // .username {
+        //   width: 15%;
+        // }
         .phonenumber {
-          width: 15%;
+          width: 30%;
         }
         .status {
-          width: 5%;
+          width: 7%;
         }
         .email {
-          width: 20%;
+          width: 30%;
         }
         .img {
           width: 3%;
         }
         .joined {
-          width: 15%;
+          width: 30%;
         }
         p {
           font-size: 0.875rem;

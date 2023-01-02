@@ -1,6 +1,7 @@
 import React from "react";
 import icon4 from "../assets/images/ic-more.png";
 import filter from "../assets/images/filter.png";
+import Modal from "./modal";
 import { useAppContext } from "../context";
 import "./userBody.scss";
 const UsersBody = () => {
@@ -57,7 +58,13 @@ const UsersBody = () => {
             </div>
             <div className="form-control">
               <label htmlFor="number">Phone Number</label>
-              <input type="number" name="number" id="number" />
+
+              <input
+                type="tel"
+                name="number"
+                id="number"
+                placeholder="Phone Number"
+              />
             </div>
             <div className="form-control">
               <label htmlFor="Status">Status</label>
@@ -66,19 +73,22 @@ const UsersBody = () => {
                 <option value="inactive">inactive</option>
               </select>
             </div>
+            <button>Reset</button>
+            <button className="color">Filter</button>
           </div>
           <div>
             {data.slice(start, end).map((item: any) => {
-              const { orgName, userName, email, phoneNumber, createdAt } = item;
+              const { orgName, userName, email, phoneNumber, createdAt, id } =
+                item;
               return (
-                <div className="data">
+                <div className="data" key={id}>
                   {/* <p className="organisation">{orgName}</p> */}
                   {/* <p className="username">{userName}</p> */}
                   <p className="email">{email}</p>
                   <p className="phonenumber">{phoneNumber}</p>
                   <p className="joined">{createdAt}</p>
                   <p className="status">active</p>
-                  <img src={icon4} alt="" srcSet="" className="img" />
+                  <Modal {...item} />
                 </div>
               );
             })}
