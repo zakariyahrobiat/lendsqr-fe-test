@@ -2,7 +2,7 @@
 
 // }
 
-.body-container {
+.user-container {
   // margin-top: 4rem;
   //   margin-left: 15rem;
   // padding: 2rem 0;
@@ -149,7 +149,7 @@
 }
 
 @media screen and (min-width: variables.$desktop) {
-  .body-container {
+  .user-container {
     // margin-top: 2rem;
     margin-left: 15rem;
     // padding: 2rem 0;
@@ -243,14 +243,14 @@
           }
         }
       }
-      .data {
+      .data-container {
         display: flex;
         gap: 1rem;
         align-items: center;
         justify-content: space-betwee;
 
         word-wrap: break-word;
-        padding: 0.5rem 0;
+        padding: 0.5rem 1rem;
         border-bottom: 1px solid rgba(33, 63, 125, 0.1);
         margin-left: 1rem;
         // .organisation {

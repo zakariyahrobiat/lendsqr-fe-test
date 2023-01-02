@@ -1,6 +1,117 @@
 @use "variables";
 .detail-container {
   margin-top: 4rem;
+  padding: 1rem 0;
+  width: 100vw;
+  p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: variables.$secondary-color;
+    padding: 0 1rem;
+  }
+  .header {
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: variables.$primary-color;
+      padding: 0;
+    }
+    .buttons {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+
+      button {
+        padding: 0.5rem;
+        color: variables.$button-color;
+        border: 1px solid variables.$button-color;
+        background-color: transparent;
+        border-radius: 8px;
+      }
+      .red {
+        border: 1px solid #e4033b;
+        color: #e4033b;
+      }
+    }
+  }
+  .detail {
+    background: #ffffff;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 1rem;
+    .person {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.5rem;
+
+      //   .name {
+      text-align: left;
+      h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: variables.$primary-color;
+      }
+      p {
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: variables.$secondary-color;
+        padding: 0;
+      }
+      //   }
+      img {
+        width: 5rem;
+      }
+    }
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .body-wrapper {
+    background: #ffffff;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    margin-top: 2rem;
+    padding: 0 1rem 1.5rem 1rem;
+
+    .body {
+      border-bottom: 1px solid variables.$primary-color;
+      padding: 1.5rem 0;
+      p {
+        font-size: 1rem;
+        font-weight: 500;
+        color: variables.$primary-color;
+        padding: 0 0 1rem 0;
+      }
+      .personal {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        word-wrap: break-word;
+        // padding: 1rem 0;
+        p {
+          color: variables.$secondary-color;
+          font-size: 1rem;
+          font-weight: 500;
+          padding: 0;
+        }
+        .question {
+          font-size: 0.75rem;
+          font-weight: 400;
+          padding-bottom: 0.5rem;
+        }
+      }
+    }
+  }
 }
 @media screen and (min-width: variables.$desktop) {
   .detail-container {
@@ -8,5 +119,12 @@
     width: 70vw;
     margin-left: 15rem;
     padding: 2rem 0;
+    .body-wrapper {
+      .body {
+        .personal {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+    }
   }
 }

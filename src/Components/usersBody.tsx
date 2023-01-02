@@ -7,7 +7,7 @@ import "./userBody.scss";
 const UsersBody = () => {
   const { data, start, end } = useAppContext();
   return (
-    <div className="body-container">
+    <div className="user-container">
       <div className="data-container">
         <div className="title">
           <div className="organisation">
