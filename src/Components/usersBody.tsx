@@ -81,7 +81,7 @@ const UsersBody = () => {
               const { orgName, userName, email, phoneNumber, createdAt, id } =
                 item;
               return (
-                <div className="data" key={id}>
+                <div className="data-container" key={id}>
                   {/* <p className="organisation">{orgName}</p> */}
                   {/* <p className="username">{userName}</p> */}
                   <p className="email">{email}</p>
