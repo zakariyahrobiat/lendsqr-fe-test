@@ -34,8 +34,10 @@ const UsersBody = () => {
             <div className="form-control">
               <label htmlFor="Organization">Organization</label>
               <select name="Organization" id="">
-                {data.map((item: any) => (
-                  <option value={item.orgName}>{item.orgName}</option>
+                {data.map((item: any, index: number) => (
+                  <option value={item.orgName} key={index}>
+                    {item.orgName}
+                  </option>
                 ))}
               </select>
             </div>

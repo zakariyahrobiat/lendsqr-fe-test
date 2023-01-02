@@ -31,10 +31,10 @@ const Body: React.FC = () => {
             <p>Status</p> <img src={filter} alt="" srcSet="" />
           </div>
         </div>
-        {data.slice(start, end).map((item: any) => {
+        {data.slice(start, end).map((item: any, index: number) => {
           const { orgName, userName, email, phoneNumber, createdAt } = item;
           return (
-            <div className="data">
+            <div className="data" key={index}>
               <p className="organisation">{orgName}</p>
               <p className="username">{userName}</p>
               <p className="email">{email}</p>

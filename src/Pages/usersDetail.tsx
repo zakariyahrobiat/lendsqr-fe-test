@@ -10,11 +10,6 @@ const UsersDetail = () => {
       <div className="dashboard-container">
         <SideBar />
         <Detail />
-        {/* <div>
-          <Header />
-          <UsersBody />
-          <DashboardFooter />
-        </div> */}
       </div>
     </div>
   );

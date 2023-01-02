@@ -23,12 +23,16 @@ const SideBar = () => {
       </div>
       <div className="sideBar">
         <p className="heading">CUSTOMERS</p>
-        {Customer.map((item) => {
+        {Customer.map((item, index) => {
           const { id, name, icon, link } = item;
 
           return (
-            <Link to={{ pathname: link }} style={{ textDecoration: `none` }}>
-              <div key={id} className="customer">
+            <Link
+              to={{ pathname: link }}
+              style={{ textDecoration: `none` }}
+              key={index}
+            >
+              <div className="customer">
                 <img src={icon} alt="" srcSet="" />
                 <p>{name}</p>
               </div>
@@ -38,11 +42,11 @@ const SideBar = () => {
       </div>
       <div className="sideBar">
         <p className="heading">BUSINESSES</p>
-        {Business.map((item) => {
+        {Business.map((item, index) => {
           const { id, name, icon } = item;
           return (
-            <Link to="" style={{ textDecoration: `none` }}>
-              <div key={id} className="customer">
+            <Link to="" style={{ textDecoration: `none` }} key={index}>
+              <div className="customer">
                 <img src={icon} alt="" srcSet="" />
                 <p>{name}</p>
               </div>
@@ -52,11 +56,11 @@ const SideBar = () => {
       </div>
       <div className="sideBar">
         <p className="heading">SETTINGS</p>
-        {Setting.map((item) => {
+        {Setting.map((item, index) => {
           const { id, name, icon } = item;
           return (
-            <Link to="" style={{ textDecoration: `none` }}>
-              <div key={id} className="customer">
+            <Link to="" style={{ textDecoration: `none` }} key={index}>
+              <div className="customer">
                 <img src={icon} alt="" srcSet="" />
                 <p>{name}</p>
               </div>

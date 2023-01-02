@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import "./detail.scss";
 const Detail = () => {
   const { detail } = useAppContext();
-  console.log(detail);
 
   const {
     guarantor,
@@ -16,7 +15,7 @@ const Detail = () => {
   } = detail.detail;
   const { bvn, avatar, gender, firstName, lastName, address, phoneNumber } =
     detail.detail.profile;
-  // console.log(avatar);
+
   const {
     level,
     employmentStatus,
@@ -122,10 +121,9 @@ const Detail = () => {
             </div>
             <div>
               <p className="question">Monthly income</p>
+
               <p>
-                {monthlyIncome.map((item: any, index: number) => {
-                  return <div key={index}>₦{item}</div>;
-                })}
+                {monthlyIncome[0]}-{monthlyIncome[1]}
               </p>
             </div>
             <div>
