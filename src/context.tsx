@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useRef, useState } from "react";
-import App from "./App";
+
 type BoxProps = {
-  children: React.ReactNode; // 👈️ type children
+  children: React.ReactNode;
 };
 
 const AppContext = React.createContext<any>(null);
