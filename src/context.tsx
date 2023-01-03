@@ -7,10 +7,11 @@ type BoxProps = {
 const AppContext = React.createContext<any>(null);
 const Context = (props: BoxProps) => {
   const refContainer = useRef<any>(null);
-  const [data, setData] = useState<any>(() => {
-    const localData = localStorage.getItem("data");
-    return localData ? JSON.parse(localData) : [];
-  });
+  const [data, setData] = useState<any>([]);
+  //     () => {
+  //     const localData = localStorage.getItem("data");
+  //     return localData ? JSON.parse(localData) : [];
+  //   });
   const [start, setstart] = useState<number>(0);
   const [end, setEnd] = useState<number>(9);
   const [count, setCount] = useState<number>(1);
@@ -35,9 +36,9 @@ const Context = (props: BoxProps) => {
   if (data.length === 0) {
     return null;
   }
-  useEffect(() => {
-    localStorage.setItem("data", JSON.stringify(data));
-  }, [data]);
+  //   useEffect(() => {
+  //     localStorage.setItem("data", JSON.stringify(data));
+  //   }, [data]);
 
   const increase = () => {
     if (end < data.length - 1) {
