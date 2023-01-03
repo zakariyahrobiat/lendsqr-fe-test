@@ -8,7 +8,7 @@ const AppContext = React.createContext<any>(null);
 const Context = (props: BoxProps) => {
   const refContainer = useRef<any>(null);
 
-  const [data, setData] = useState<any>(() => {
+  const [data, setData] = useState<any>([], () => {
     const localData = localStorage.getItem("data");
     return localData ? JSON.parse(localData) : [];
   });
